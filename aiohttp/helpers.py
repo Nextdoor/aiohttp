@@ -68,7 +68,7 @@ except ImportError:
 def all_tasks(
         loop: Optional[asyncio.AbstractEventLoop] = None
 ) -> Set['asyncio.Task[Any]']:
-    tasks = list(asyncio.Task.all_tasks(loop))
+    tasks = list(asyncio.all_tasks(loop))
     return {t for t in tasks if not t.done()}
 
 
